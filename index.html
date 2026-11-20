@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ada Pesan Untukmu ✨</title>
+    <style>
+        @import url('https://googleapis.com');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            background: #ffffff;
+            max-width: 450px;
+            width: 100%;
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 12px 28px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+            transform: scale(1.03);
+        }
+
+        #isi-ucapan {
+            display: none;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pengirim {
+            margin-top: 25px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Tampilan Awal Sebelum Dibuka -->
+        <div id="amplop">
+            <div class="icon">💌</div>
+            <h1>Hai, [Nana Cantik]!</h1>
+            <p>Ada sedikit pesan spesial yang dibuat khusus untukmu hari ini.</p>
+            <button class="btn" onclick="bukaPesan()">Buka Ucapan</button>
+        </div>
+
+        <!-- Isi Ucapan Utama -->
+        <div id="isi-ucapan">
+            <div class="icon">✨</div>
+            <h1>[Selamat Ulang Tahun 🥳]</h1>
+            <p>
+                [Semoga hari-harimu selalu dipenuhi kebahagiaan, kesehatan, dan hal-hal baik yang kamu impikan.]
+            </p>
+            <p>
+                [Terima kasih sudah menjadi sosok yang hebat.]
+            </p>
+            <div class="pengirim">Dari, [Orang yang selalu pengen liat kamu bahagia terus]</div>
+        </div>
+    </div>
+
+    <script>
+        function bukaPesan() {
+            document.getElementById('amplop').style.display = 'none';
+            document.getElementById('isi-ucapan').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
